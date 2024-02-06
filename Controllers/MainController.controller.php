@@ -12,7 +12,7 @@ class MainController extends Render
         $this->mainManager = new MainManager();
     }
 
-    public function accueil(): void
+    public function accueil(): void 
     {
         $data_page = [
             "page_description" => "Description de la page d'accueil",
