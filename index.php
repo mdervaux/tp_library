@@ -19,7 +19,7 @@ try {
             break;
         case "page1" : $mainController->page1();
             break;
-        case "page2" : $mainController->page2();
+        case "connection" : $mainController->connection();
             break;
         case "page3" : $mainController->page3();
             break;
