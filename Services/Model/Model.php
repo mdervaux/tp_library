@@ -4,7 +4,7 @@ abstract class Model{
     private static $pdo;
 
     private static function setBdd(){
-        self::$pdo = new PDO("mysql:host=localhost;dbname=tp_libraby;charset=utf8", "root", "");
+        self::$pdo = new PDO("mysql:host=localhost;dbname=tp_library;charset=utf8", "root", "");
         self::$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     }
 

@@ -3,9 +3,6 @@
     <br />
     --------------------------
     <br />
-    Information 1 : <?= $ligne["data1"]; ?>
-    <br />
-    Information 2 :<?= $ligne["data2"]; ?>
     <br />
     --------------------------
     <br />

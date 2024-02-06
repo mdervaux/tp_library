@@ -1,20 +1,28 @@
 <?php
 
-class ConnectDb {
+abstract class ConnectDb {
     private static $instance;
-    private $host = "localhost";
-    private $dbname = "tp_library";
-    private $charset = "utf-8";
-    private $username = "root";
-    private $password = "";
 
     private function __construct() {
-        self::$instance = new PDO("mysql:host={$this->host};dbname={$this->dbname};charset={$this->charset}", $this->username, $this->password);
+    }
+    private static function setBdd() {
+        self::$instance = new PDO("mysql:host=localhost;dbname=tp_library;charset=utf-8", "root", "");
         self::$instance->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     }
-    public static function getInstance() {
+
+    protected function getBdd() {
         if (self::$instance == null) {
-            self::$instance = new ConnectDb();
+            self::setBdd();
         }
+        return self::$instance;
     }
+    public function __clone() {
+        throw new Exception("Impossible de créer une copie", 1);
+    }
+
+    public function __wakeup() {
+        throw new Exception("Impossible de rétablir la connexion à la bdd", 1);
+
+    }
+
 }
