@@ -4,7 +4,9 @@ define("URL", str_replace("index.php","",(isset($_SERVER['HTTPS'])? "https" : "h
     "://".$_SERVER['HTTP_HOST'].$_SERVER["PHP_SELF"]));
 
 require_once("./Controllers/MainController.controller.php");
+require_once("./Controllers/BookController.controller.php");
 $mainController = new MainController();
+$bookController = new BookController();
 
 try {
     if(empty($_GET['page'])){
@@ -17,7 +19,7 @@ try {
     switch($page){
         case "accueil" : $mainController->accueil();
             break;
-        case "page1" : $mainController->page1();
+        case "page1" : $bookController->index();
             break;
         case "connection" : $mainController->connection();
             break;
