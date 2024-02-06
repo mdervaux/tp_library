@@ -7,7 +7,7 @@ class MemberFactory {
             case Role::MEMBER:
                 return new Member();
             default:
-                throw new Exception("Invalid role: $member->role");
+                throw new Exception("Invalid role: $role");
         }
     }
 }
