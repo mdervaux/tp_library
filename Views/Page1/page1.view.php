@@ -3,7 +3,8 @@
     <br />
     --------------------------
     <br />
-    <?=  $ligne['titre'] ?>
+    Titre : <?=  $ligne['titre'] ?><br/>
+    Auteur : <?= $ligne['auteur'] ?>
     <br />
     --------------------------
     <br />

@@ -13,18 +13,24 @@
         <div class="hidden lg:flex lg:items-center lg:w-auto w-full" id="mobileMenu">
             <ul class="lg:flex items-center justify-between text-base text-white pt-4 lg:pt-0">
                 <li><a class="lg:p-4 py-3 px-0 block border-b-2 border-transparent lg:border-none hover:border-indigo-400" href="<?= URL ?>accueil">Accueil</a></li>
-                <li><a class="lg:p-4 py-3 px-0 block border-b-2 border-transparent lg:border-none hover:border-indigo-400" href="<?= URL ?>page1">Page1</a></li>
-                <li>
-                    <a class="lg:p-4 py-3 px-0 block border-b-2 border-transparent lg:border-none hover:border-indigo-400" href="<?= URL ?>inscription">inscription</a>
-                </li>
-                <li class="relative">
-                    <button id="dropdownButton" class="lg:p-4 py-3 px-0 block border-b-2 border-transparent lg:border-none hover:border-indigo-400">
+                <li><a class="lg:p-4 py-3 px-0 block border-b-2 border-transparent lg:border-none hover:border-indigo-400" href="<?= URL ?>page1">Liste des livres</a></li>
+                
+                <!-- <li class="relative">
+                    <button id="dropdownButton" class="lg:p-4 py-3 px-0 block border-b-2 border-transparent lg:border-none hover:border-indigo-400 content-end">
                         Liste déroulante
                     </button>
                     <ul id="dropdownMenu" class="absolute hidden text-gray-700 pt-1">
                         <li><a class="rounded-t bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="<?= URL ?>connection">Connection</a></li>
                         <li><a class="rounded-b bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="<?= URL ?>page3">Page3</a></li>
                     </ul>
+                </li> -->
+            </ul>
+            <ul class="lg:flex items-left text-base text-white pt-4 lg:pt-0">
+                <li>
+                    <a class="lg:p-4 py-3 px-0 block border-b-2 border-transparent lg:border-none hover:border-indigo-400" href="<?= URL ?>inscription">S'inscrire</a>
+                </li>
+                <li>
+                    <a class="lg:p-4 py-3 px-0 block border-b-2 border-transparent lg:border-none hover:border-indigo-400 flex justify-end" href="<?= URL ?>connection">Se connecter</a>
                 </li>
             </ul>
         </div>
