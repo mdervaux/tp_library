@@ -37,12 +37,12 @@ class MainController extends Render
         ];
         $this->render($data_page);
     }
-    public function page2(): void
+    public function connection(): void
     {
         $data_page = [
-            "page_description" => "Description de la page d'accueil",
-            "page_title" => "Titre de la page d'accueil",
-            "view" => "Views/Page2/page2.view.php",
+            "page_description" => "Page pour se connecter",
+            "page_title" => "Connection",
+            "view" => "Views/Connection/connection.view.php",
             "template" => "Views/Layouts/base.php"
         ];
         $this->render($data_page);
@@ -54,6 +54,16 @@ class MainController extends Render
             "page_title" => "Titre de la page d'accueil",
             "page_javascript" => ["page3.js"],
             "view" => "Views/Page3/page3.view.php",
+            "template" => "Views/Layouts/base.php"
+        ];
+        $this->render($data_page);
+    }
+    public function inscription(): void
+    {
+        $data_page = [
+            "page_description" => "Description de la page d'accueil",
+            "page_title" => "Titre de la page d'accueil",
+            "view" => "Views/Inscription/inscription.php",
             "template" => "Views/Layouts/base.php"
         ];
         $this->render($data_page);

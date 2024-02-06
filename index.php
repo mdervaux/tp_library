@@ -19,9 +19,11 @@ try {
             break;
         case "page1" : $mainController->page1();
             break;
-        case "page2" : $mainController->page2();
+        case "connection" : $mainController->connection();
             break;
         case "page3" : $mainController->page3();
+            break;
+            case "inscription" : $mainController->inscription();
             break;
         default : throw new Exception("La page n'existe pas");
     }
