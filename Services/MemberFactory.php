@@ -4,10 +4,8 @@ class MemberFactory {
         switch ($role) {
             case $member->admin:
                 return new Admin();
-            case $member->user:
-                return new User();
-            case $member->guest:
-                return new Guest();
+            case $member->member:
+                return new Member();
             default:
                 throw new Exception("Invalid role: $member->role");
         }

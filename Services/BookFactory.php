@@ -1,12 +1,12 @@
 <?php
 class BookFactory {
     public static function createBook($book){
-        switch ($type) {
-            case $book->digital:
+        switch ($book->sizze) {
+            case $book->filesize:
                 return new DigitalBook();
                 break;
             
-            case $book->physical:
+            case $book->weight:
                 return new PhysicalBook();
                 break;
 
