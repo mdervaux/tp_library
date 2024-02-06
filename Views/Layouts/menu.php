@@ -14,6 +14,9 @@
             <ul class="lg:flex items-center justify-between text-base text-white pt-4 lg:pt-0">
                 <li><a class="lg:p-4 py-3 px-0 block border-b-2 border-transparent lg:border-none hover:border-indigo-400" href="<?= URL ?>accueil">Accueil</a></li>
                 <li><a class="lg:p-4 py-3 px-0 block border-b-2 border-transparent lg:border-none hover:border-indigo-400" href="<?= URL ?>page1">Page1</a></li>
+                <li>
+                    <a class="lg:p-4 py-3 px-0 block border-b-2 border-transparent lg:border-none hover:border-indigo-400" href="<?= URL ?>inscription">inscription</a>
+                </li>
                 <li class="relative">
                     <button id="dropdownButton" class="lg:p-4 py-3 px-0 block border-b-2 border-transparent lg:border-none hover:border-indigo-400">
                         Liste déroulante

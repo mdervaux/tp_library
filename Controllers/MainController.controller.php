@@ -58,6 +58,16 @@ class MainController extends Render
         ];
         $this->render($data_page);
     }
+    public function inscription(): void
+    {
+        $data_page = [
+            "page_description" => "Description de la page d'accueil",
+            "page_title" => "Titre de la page d'accueil",
+            "view" => "Views/Inscription/inscription.php",
+            "template" => "Views/Layouts/base.php"
+        ];
+        $this->render($data_page);
+    }
     public function pageErreur($msg): void
     {
         $data_page = [

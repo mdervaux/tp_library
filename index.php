@@ -23,6 +23,8 @@ try {
             break;
         case "page3" : $mainController->page3();
             break;
+            case "inscription" : $mainController->inscription();
+            break;
         default : throw new Exception("La page n'existe pas");
     }
 } catch (Exception $e){
