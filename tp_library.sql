@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : mar. 06 fév. 2024 à 10:50
+-- Généré le : mar. 06 fév. 2024 à 16:12
 -- Version du serveur : 10.4.28-MariaDB
 -- Version de PHP : 8.2.4
 
@@ -34,7 +34,7 @@ CREATE TABLE `livre` (
   `poids` int(11) DEFAULT NULL,
   `taille` int(11) DEFAULT NULL,
   `id_type_livre` int(11) NOT NULL,
-  `emprunte` tinyInt(2) NOT NULL DEFAULT 0,
+  `emprunte` tinyint(1) NOT NULL DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
