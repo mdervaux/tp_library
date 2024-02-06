@@ -26,7 +26,7 @@ class MainController extends Render
     public function page1(): void
     {
         $datas = $this->mainManager->getDatas();
-       Toolbox::addAlert('test', Toolbox::COULEUR_VERTE);
+        Toolbox::addAlert('test', Toolbox::COULEUR_VERTE);
         $data_page = [
             "page_description" => "Description de la page d'accueil",
             "page_title" => "Titre de la page d'accueil",
