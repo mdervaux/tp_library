@@ -15,8 +15,7 @@ Class UserManager extends ConnectDb {
             $stmt->bindParam(':password', $password);
             $stmt->execute();
 
-            if ($stmt->rowCount() == 1) {
-            
+            if ($stmt->rowCount() == 1) {           
                 echo "Login successful!";
             } else {
             
@@ -25,6 +24,28 @@ Class UserManager extends ConnectDb {
         } catch (PDOException $e) {
             return "Database Error: " . $e->getMessage();
         }
+
+    }
+
+    public function inscription($username,$mail,$password) {
+        try{
+            $stmt = $this->db->prepare("INSERT INTO utilisateur(nom_utilisateur,mot_de_passe,email,id_role) VALUES(:nom_utilisateur,:password,:email,2)");
+            $stmt->bindParam(':nom_utilisateur', $username);
+            $stmt->bindParam(':password', $password);
+            $stmt->bindParam(':email', $mail);
+            $stmt->execute();
+
+            if ($stmt->rowCount() == 1) { 
+                
+                echo "Utilisateur ajouté avec succés";
+            } else {
+               
+                echo "CA MARCHE PAAAAAAAAAAAAAAAAAAAAAAAAS";
+            }
+        } catch (PDOException $e) {
+            return "Database Error: " . $e->getMessage();
+        }
+
 
     }
 
