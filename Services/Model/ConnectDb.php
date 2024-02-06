@@ -3,7 +3,7 @@
 class ConnectDb {
     private static $instance;
     private $host = "localhost";
-    private $dbname = "zsite";
+    private $dbname = "tp_library";
     private $charset = "utf-8";
     private $username = "root";
     private $password = "";
