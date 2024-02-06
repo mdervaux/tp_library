@@ -1,9 +1,9 @@
-<h1 class='text-blue-600 text-3xl text-center'>Page 1</h1>
+<h1 class='text-blue-600 text-3xl text-center'>Livre</h1>
 <?php foreach ($datas as $ligne): ?>
     <br />
     --------------------------
     <br />
-    <form action="Controllers/ScriptInscription.php" method="POST">
+    <form action="" method="POST">
         <?= $ligne['titre'] ?>
         -
         <?= $ligne['auteur'] ?>
