@@ -1,9 +1,11 @@
 <?php
-class Book implements ArrayAccess
+class Book implements ArrayAccess , Subject
 {
     public string $title;
     public string $author;
     public int $price;
+    private $observers = [];
+    private $state;
 
     public function __construct(
         string $title,
@@ -37,6 +39,21 @@ class Book implements ArrayAccess
     {
         unset($this->data[$offset]);
     }
+    public function attach(Observer $observer)
+    {
+        $this->observers[] = $observer;
+    }
+    public function detach(Observer $observer){
+        $key = array_search($observer, $this->observers);
+        if($key){
+            unset($this->observers[$key]);
+        }
+    }
+    public function notify(){
+        foreach ($this->observers as $observer){
+            $observer->update($this);
+        }
+    }
 
     /**
      * @return string
@@ -67,4 +84,5 @@ class Book implements ArrayAccess
     public function getPriceAsCurrency(){
         return "$".$this->getPrice()/100;
     }
+
 }

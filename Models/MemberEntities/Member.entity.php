@@ -1,6 +1,6 @@
 <?php
 require_once("Role.enum.php");
-class Member
+class Member implements Observer
 {
     public string $name;
     public string $mail;
@@ -17,6 +17,10 @@ class Member
         $this->password = $password;
     }
     
+    public function update(Subject $subject)
+    {
+        echo "The book " . $subject->title . " by " . $subject->author . " is now available for " . $subject->price . " dollars.<br>";
+    }
 
    public function getName(): string
    {
