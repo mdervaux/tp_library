@@ -16,10 +16,9 @@ Class UserManager extends ConnectDb {
             $stmt->execute();
 
             if ($stmt->rowCount() == 1) {           
-                echo "Login successful!";
+                header('Location: ../public/media/ok.html');
             } else {
-            
-                echo "Invalid email or password";
+                header('Location: ../public/media/failed.html');
             }
         } catch (PDOException $e) {
             return "Database Error: " . $e->getMessage();
