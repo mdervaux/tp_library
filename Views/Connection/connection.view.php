@@ -18,7 +18,7 @@
                  
                   <button type="submit" class="w-full focus:ring-4 focus:outline-none focus:ring-primary-300" style="border: #3e3e8b 1px solid ;border-radius: 5px;width: contain;background: #3e3e8b; color:white">Se connecter</button>
                   <p class="text-sm font-light text-gray-500 dark:text-gray-400">
-                      Vous n'avez pas de compte ? <a href="#" class="font-medium text-primary-600 hover:underline dark:text-primary-500">S'inscrire</a>
+                      Vous n'avez pas de compte ? <a href="inscription" class="font-medium text-primary-600 hover:underline dark:text-primary-500">S'inscrire</a>
                   </p>
               </form>
           </div>
