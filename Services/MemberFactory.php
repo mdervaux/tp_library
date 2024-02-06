@@ -1,8 +1,8 @@
 <?php
 class MemberFactory {
-    public static function createMember($member) {
+    public static function createMember($role) {
         switch ($role) {
-            case $member->admin:
+            case Role::ADMIN:
                 return new Admin();
             case $member->member:
                 return new Member();
@@ -10,16 +10,4 @@ class MemberFactory {
                 throw new Exception("Invalid role: $member->role");
         }
     }
-}
-
-class Admin {
-    // Admin class implementation
-}
-
-class User {
-    // User class implementation
-}
-
-class Guest {
-    // Guest class implementation
 }
