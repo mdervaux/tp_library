@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : mar. 06 fév. 2024 à 10:50
+-- Généré le : mar. 06 fév. 2024 à 16:12
 -- Version du serveur : 10.4.28-MariaDB
 -- Version de PHP : 8.2.4
 
@@ -33,24 +33,25 @@ CREATE TABLE `livre` (
   `auteur` varchar(50) NOT NULL,
   `poids` int(11) DEFAULT NULL,
   `taille` int(11) DEFAULT NULL,
-  `id_type_livre` int(11) NOT NULL
+  `id_type_livre` int(11) NOT NULL,
+  `emprunte` tinyint(1) NOT NULL DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Déchargement des données de la table `livre`
 --
 
-INSERT INTO `livre` (`id`, `titre`, `auteur`, `poids`, `taille`, `id_type_livre`) VALUES
-(1, 'Le Seigneur des Anneaux', 'J.R.R. Tolkien', 2, NULL, 1),
-(2, 'Harry Potter à l\'école des sorciers', 'J.K. Rowling', 1, NULL, 1),
-(3, '1984', 'George Orwell', NULL, 15, 2),
-(4, 'L\'Alchimiste', 'Paulo Coelho', NULL, 16, 2),
-(5, 'Le Petit Prince', 'Antoine de Saint-Exupéry', 1, NULL, 1),
-(6, 'The Catcher in the Rye', 'J.D. Salinger', NULL, 14, 2),
-(7, 'Don Quixote', 'Miguel de Cervantes', 1, NULL, 1),
-(8, 'Les Misérables', 'Victor Hugo', 2, NULL, 1),
-(9, 'The Great Gatsby', 'F. Scott Fitzgerald', NULL, 17, 2),
-(10, 'To Kill a Mockingbird', 'Harper Lee', 1, NULL, 1);
+INSERT INTO `livre` (`id`, `titre`, `auteur`, `poids`, `taille`, `id_type_livre`, `emprunte`) VALUES
+(1, 'Le Seigneur des Anneaux', 'J.R.R. Tolkien', 2, NULL, 1, 0),
+(2, 'Harry Potter à l\'école des sorciers', 'J.K. Rowling', 1, NULL, 1, 0),
+(3, '1984', 'George Orwell', NULL, 15, 2, 1),
+(4, 'L\'Alchimiste', 'Paulo Coelho', NULL, 16, 2, 0),
+(5, 'Le Petit Prince', 'Antoine de Saint-Exupéry', 1, NULL, 1, 0),
+(6, 'The Catcher in the Rye', 'J.D. Salinger', NULL, 14, 2, 0),
+(7, 'Don Quixote', 'Miguel de Cervantes', 1, NULL, 1, 0),
+(8, 'Les Misérables', 'Victor Hugo', 2, NULL, 1, 0),
+(9, 'The Great Gatsby', 'F. Scott Fitzgerald', NULL, 17, 2, 0),
+(10, 'To Kill a Mockingbird', 'Harper Lee', 1, NULL, 1, 0);
 
 -- --------------------------------------------------------
 

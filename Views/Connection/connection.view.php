@@ -1,24 +1,24 @@
-<section class="bg-gray-50 dark:bg-gray-900">
+<section class="bg-gray-50">
   <div class="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
      
       <div class="w-full bg-white rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-800 dark:border-gray-700">
           <div class="p-6 space-y-4 md:space-y-6 sm:p-8">
               <h1 class="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white">
-                  Sign in to your account
+                  Se connecter
               </h1>
               <form class="space-y-4 md:space-y-6" action="Controllers/ScriptConnection.php" method="POST">
                   <div>
-                      <label  class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your name</label>
-                      <input type="text" name="name"  class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="name@company.com" required="">
+                      <label  class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Votre nom d'utilisateur :</label>
+                      <input type="text" name="name"  class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Username" required="">
                   </div>
                   <div>
-                      <label for="password" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Password</label>
+                      <label for="password" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Mot de passe :</label>
                       <input type="password" name="password" id="password" placeholder="••••••••" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required="">
                   </div>
                  
-                  <button type="submit" class="w-full focus:ring-4 focus:outline-none focus:ring-primary-300" style="border: blue 1px solid ;border-radius: 5px;width: contain">Sign in</button>
+                  <button type="submit" class="w-full focus:ring-4 focus:outline-none focus:ring-primary-300" style="border: #3e3e8b 1px solid ;border-radius: 5px;width: contain;background: #3e3e8b; color:white">Se connecter</button>
                   <p class="text-sm font-light text-gray-500 dark:text-gray-400">
-                      Don’t have an account yet? <a href="#" class="font-medium text-primary-600 hover:underline dark:text-primary-500">Sign up</a>
+                      Vous n'avez pas de compte ? <a href="inscription" class="font-medium text-primary-600 hover:underline dark:text-primary-500">S'inscrire</a>
                   </p>
               </form>
           </div>
