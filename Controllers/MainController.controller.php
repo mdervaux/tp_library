@@ -23,20 +23,20 @@ class MainController extends Render
         ];
         $this->render($data_page);
     }
-    public function page1(): void
-    {
-        $datas = $this->mainManager->getDatas();
-        Toolbox::addAlert('test', Toolbox::COULEUR_VERTE);
-        $data_page = [
-            "page_description" => "Description de la page d'accueil",
-            "page_title" => "Titre de la page d'accueil",
-            "page_css" => ["page1.css"],
-            "datas" => $datas,
-            "view" => "Views/Page1/page1.view.php",
-            "template" => "Views/Layouts/base.php"
-        ];
-        $this->render($data_page);
-    }
+    // public function page1(): void
+    // {
+    //     $datas = $this->mainManager->getDatas();
+    //     Toolbox::addAlert('test', Toolbox::COULEUR_VERTE);
+    //     $data_page = [
+    //         "page_description" => "Description de la page d'accueil",
+    //         "page_title" => "Titre de la page d'accueil",
+    //         "page_css" => ["page1.css"],
+    //         "datas" => $datas,
+    //         "view" => "Views/Book/index.php",
+    //         "template" => "Views/Layouts/base.php"
+    //     ];
+    //     $this->render($data_page);
+    // }
     public function connection(): void
     {
         $data_page = [
