@@ -1,9 +1,12 @@
 <?php
+require_once("Role.enum.php");
 class Member
 {
     public string $name;
     public string $mail;
     private string $password;
+
+    public role $role;
 
 
 
